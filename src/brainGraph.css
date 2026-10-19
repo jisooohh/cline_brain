@@ -1,0 +1,459 @@
+.brain-graph {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg, #191a1c);
+  color: var(--text, #dfded9);
+}
+.brain-graph-header {
+  padding: 12px 20px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.brain-graph-header > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+.brain-graph-header strong {
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.brain-graph-header span {
+  font-size: 11px;
+  color: #8a8b88;
+  white-space: nowrap;
+}
+.brain-graph-header > label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  padding: 0 9px;
+  height: 30px;
+  box-sizing: border-box;
+  width: 190px;
+  max-width: 100%;
+  border: 1px solid #ffffff12;
+  border-radius: 5px;
+  background: #ffffff03;
+  color: #858a91;
+  flex-shrink: 0;
+}
+.brain-graph-header > label:focus-within {
+  border-color: #ad93e26b;
+}
+.brain-graph-header > label svg {
+  flex-shrink: 0;
+}
+.brain-graph-header > label input {
+  width: 100%;
+  min-width: 0;
+  height: 28px;
+  margin: 0;
+  padding: 0;
+  border: 0 !important;
+  border-radius: 0;
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none;
+  font-size: 11px;
+  color: #d8dae5;
+  line-height: normal;
+}
+.brain-graph-canvas {
+  flex: 1;
+  position: relative;
+  min-height: 180px;
+  overflow: hidden;
+  background-image: radial-gradient(#7772 0.7px, transparent 0.7px);
+  background-size: 22px 22px;
+}
+.brain-graph-canvas > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  touch-action: none;
+  cursor: grab;
+}
+.brain-graph-canvas > svg:active {
+  cursor: grabbing;
+}
+.brain-graph-canvas line {
+  stroke: #626c694d;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+.brain-graph-canvas line.connected {
+  stroke: #a2bbaa;
+  stroke-width: 1.5;
+}
+.graph-node {
+  cursor: pointer;
+  outline: none;
+  color: #a1b8a7;
+}
+.graph-node.proposed {
+  color: #b8a68b;
+}
+.graph-node.archived {
+  color: #6c7178;
+}
+.graph-node circle {
+  fill: currentColor;
+  stroke: var(--bg, #191a1c);
+  stroke-width: 2;
+}
+.graph-node .node-halo {
+  fill: currentColor;
+  opacity: 0.06;
+  stroke: none;
+}
+.graph-node.selected .node-halo,
+.graph-node:focus-visible .node-halo {
+  opacity: 0.22;
+}
+.graph-node:focus-visible circle {
+  stroke: #eee;
+}
+.graph-node text {
+  fill: #a9aaa6;
+  font-size: 11px;
+  pointer-events: none;
+}
+.graph-node.selected text,
+.graph-node.neighbor text {
+  fill: #f1ede6;
+}
+.graph-node.selected circle {
+  stroke: #e3e7df;
+}
+.graph-zoom {
+  position: absolute;
+  bottom: 16px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #222426;
+  border: 1px solid #ffffff12;
+  border-radius: 8px;
+  padding: 4px;
+  color: #bbb;
+}
+.graph-zoom button {
+  display: flex;
+  padding: 7px;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+}
+.graph-zoom span {
+  font-size: 10px;
+  min-width: 34px;
+  text-align: center;
+}
+.graph-zoom button:hover {
+  background: #ffffff0c;
+  border-radius: 4px;
+}
+.brain-graph-footer {
+  padding: 12px 24px 18px;
+  border-top: 1px solid #ffffff08;
+  font-size: 11px;
+  color: #8a8b88;
+}
+.brain-graph-footer > div {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.brain-graph-footer label {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.brain-graph-footer input {
+  width: auto;
+}
+.brain-graph-footer p {
+  margin: 8px 0 0;
+  font-size: 10px;
+}
+.graph-legend:before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-right: 6px;
+  background: #a1b8a7;
+}
+.graph-legend.proposed:before {
+  background: #b8a68b;
+}
+.brain-graph-empty {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #92948f;
+  text-align: center;
+  padding: 20px;
+}
+.brain-graph-empty h3 {
+  font-size: 15px;
+  font-weight: 500;
+}
+.brain-graph-empty p {
+  font-size: 12px;
+}
+.document-tabs .graph-tab {
+  margin-left: 3px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 14px;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  color: #949792;
+  font-size: 12px;
+  cursor: pointer;
+}
+.document-tabs .graph-tab[aria-pressed="true"] {
+  color: #d6e2d7;
+  border-bottom-color: #a1b8a7;
+  background: #a1b8a708;
+}
+.document-with-inspector.graph-hidden,
+.document-empty.graph-hidden {
+  display: none;
+}
+
+.document-tabs .graph-tab {
+  position: static;
+  background: #202221;
+  z-index: 2;
+}
+.graph-zoom svg {
+  width: 15px;
+  height: 15px;
+  position: static;
+}
+/* Kuku Quiet Constellation tokens, mapped to the existing workspace theme. */
+.brain-graph[data-kuku-constellation],
+.brain-graph-canvas[data-kuku-constellation-canvas] {
+  --color-bg-primary: #1e1e1e;
+  --color-border: #ffffff10;
+  --constellation-bg: var(--color-bg-primary);
+}
+.brain-graph-header.kuku-constellation-header {
+  padding: 12px 20px;
+  min-height: 54px;
+  flex-basis: auto;
+  height: auto;
+  box-sizing: border-box;
+}
+.brain-graph-canvas {
+  background-image: none;
+}
+.graph-node {
+  color: #ad93e2;
+}
+.graph-node.proposed {
+  color: #92a3c4;
+}
+.graph-node text {
+  fill: var(--constellation-muted, #9299ae);
+  font-size: 10px;
+}
+.graph-node .node-halo {
+  opacity: 0.04;
+}
+.graph-legend.active:before {
+  background: #ad93e2;
+}
+.graph-legend.proposed:before {
+  background: #92a3c4;
+}
+/* Like Kuku's canvas labels, graph text never becomes a browser drag payload. */
+.brain-graph-canvas,
+.brain-graph-canvas * {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.brain-graph-canvas text {
+  pointer-events: none;
+}
+.brain-graph-canvas .edge-hit {
+  stroke: transparent;
+  stroke-width: 12;
+  pointer-events: stroke;
+}
+.brain-graph-canvas .context-edge {
+  stroke: #ad93e275;
+  stroke-dasharray: 4 3;
+  pointer-events: none;
+}
+.brain-graph-canvas .wiki-edge {
+  pointer-events: none;
+}
+.brain-graph-canvas .context-edge.connected,
+.graph-edge:focus-visible .context-edge {
+  stroke: #c3acf0;
+  stroke-width: 2;
+}
+.graph-edge {
+  cursor: pointer;
+  outline: none;
+}
+.graph-edge:focus-visible .wiki-edge {
+  stroke: white;
+}
+.graph-edge-legend {
+  color: #b8a2df;
+}
+.graph-wiki-legend {
+  color: #9299ae;
+}
+.graph-evidence {
+  flex: 0 0 auto;
+  max-height: 190px;
+  overflow: auto;
+  border-top: 1px solid #ffffff12;
+  padding: 12px 24px;
+  font-size: 11px;
+  color: #b0b3c1;
+  background: #222225;
+}
+.graph-evidence > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.graph-evidence strong {
+  font-weight: 500;
+  color: #d6c6f3;
+}
+.graph-evidence button {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+}
+.graph-evidence p {
+  margin: 8px 0;
+}
+.graph-evidence small {
+  color: #8c91a1;
+}
+.graph-evidence .graph-evidence-run {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 6px 0;
+  gap: 3px;
+  font-size: 11px;
+}
+.graph-evidence-run:hover {
+  text-decoration: underline;
+}
+.document-tabs .graph-tab[aria-pressed="true"] {
+  background: #252725;
+}
+/* Keep edges and halos from cutting through document names. */
+.graph-node text {
+  paint-order: stroke fill;
+  stroke: #1e1e1e;
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+.document-tabs .graph-tab {
+  height: 28px;
+  padding: 0 10px;
+}
+.graph-node.dimmed {
+  opacity: 0.14;
+}
+.graph-edge.dimmed {
+  opacity: 0.07;
+}
+.graph-node,
+.graph-edge {
+  transition: opacity 180ms ease;
+}
+.graph-context {
+  flex: 0 0 auto;
+  max-height: 210px;
+  overflow: auto;
+  border-top: 1px solid #ffffff12;
+  background: #222225;
+  padding: 12px 20px;
+  color: #c8c9d1;
+  font-size: 12px;
+}
+.graph-context-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.graph-context-heading strong {
+  flex: 1;
+  min-width: 180px;
+  overflow-wrap: anywhere;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.graph-context button {
+  background: transparent;
+  border: 1px solid #ffffff12;
+  border-radius: 5px;
+  color: inherit;
+  padding: 6px 9px;
+  font-size: 11px;
+  cursor: pointer;
+}
+.graph-context-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 6px;
+  margin-top: 10px;
+}
+.graph-context-links button {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+.graph-context-links small {
+  color: #a994ca;
+  font-size: 10px;
+}
+.graph-context button:hover {
+  background: #ffffff06;
+}
+@media (prefers-reduced-motion: reduce) {
+  .graph-node,
+  .graph-edge {
+    transition: none;
+  }
+}

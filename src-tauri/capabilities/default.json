@@ -1,0 +1,1 @@
+{"identifier":"default","description":"ClineBrain main window","windows":["main"],"permissions":["core:default","opener:default","dialog:allow-open"]}

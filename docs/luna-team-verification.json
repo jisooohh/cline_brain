@@ -1,0 +1,82 @@
+[
+  {
+    "id": "8fd7ce2f-ae8a-4e00-b062-7c79d94c29a2",
+    "status": "completed",
+    "model": "gpt-6-luna",
+    "memoryId": "0946fd1f-6245-43d9-9e40-4ac71f7ad6de",
+    "agents": [
+      {
+        "role": "Team lead",
+        "status": "completed",
+        "sessionId": "01a155c7-9357-7061-9454-dee9553e197f",
+        "startedAt": "2026-10-19T20:08:25.005Z",
+        "finishedAt": "2026-10-19T20:08:29.327Z",
+        "outputLength": 236
+      },
+      {
+        "role": "Context analyst",
+        "status": "completed",
+        "sessionId": "01a155c7-79a2-7273-824f-f9be4febae3d",
+        "startedAt": "2026-10-19T20:08:18.116Z",
+        "finishedAt": "2026-10-19T20:08:23.514Z",
+        "outputLength": 175
+      },
+      {
+        "role": "Writer",
+        "status": "completed",
+        "sessionId": "01a155c7-7949-7a80-b121-99a659abcfec",
+        "startedAt": "2026-10-19T20:08:18.126Z",
+        "finishedAt": "2026-10-19T20:08:25.003Z",
+        "outputLength": 230
+      },
+      {
+        "role": "Critical reviewer",
+        "status": "completed",
+        "sessionId": "01a155c7-79b7-7e12-ae92-f2e5c8e13839",
+        "startedAt": "2026-10-19T20:08:18.134Z",
+        "finishedAt": "2026-10-19T20:08:24.470Z",
+        "outputLength": 197
+      }
+    ]
+  },
+  {
+    "id": "3bfecd39-82f5-4453-9d1f-fbf1a3d5ad1b",
+    "status": "completed",
+    "model": "gpt-6-luna",
+    "memoryId": "49ce4b02-7158-479a-8587-4450a1fd661f",
+    "agents": [
+      {
+        "role": "Team lead",
+        "status": "completed",
+        "sessionId": "01a155c7-8233-7eb0-b215-54e44a089d2f",
+        "startedAt": "2026-10-19T20:08:20.543Z",
+        "finishedAt": "2026-10-19T20:08:27.037Z",
+        "outputLength": 440
+      },
+      {
+        "role": "Context analyst",
+        "status": "completed",
+        "sessionId": "01a155c7-6628-7933-87b0-3a76aa4c407d",
+        "startedAt": "2026-10-19T20:08:13.082Z",
+        "finishedAt": "2026-10-19T20:08:20.513Z",
+        "outputLength": 409
+      },
+      {
+        "role": "Writer",
+        "status": "completed",
+        "sessionId": "01a155c7-6624-7790-8f03-3dbc6f1645b4",
+        "startedAt": "2026-10-19T20:08:13.105Z",
+        "finishedAt": "2026-10-19T20:08:20.467Z",
+        "outputLength": 494
+      },
+      {
+        "role": "Critical reviewer",
+        "status": "completed",
+        "sessionId": "01a155c7-6628-7922-9e20-53e3d1f71c31",
+        "startedAt": "2026-10-19T20:08:13.113Z",
+        "finishedAt": "2026-10-19T20:08:20.540Z",
+        "outputLength": 447
+      }
+    ]
+  }
+]

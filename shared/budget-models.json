@@ -1,0 +1,56 @@
+[
+  {
+    "id": "deepseek/deepseek-v4.1-flash",
+    "name": "DeepSeek V4.1 Flash",
+    "mark": "deepseek",
+    "inputPrice": 0.032,
+    "outputPrice": 0.144,
+    "contextWindow": 1048576,
+    "catalogDate": "2026-10-19"
+  },
+  {
+    "id": "qwen/qwen3.8-flash",
+    "name": "Qwen3.8 Flash",
+    "mark": "qwen",
+    "inputPrice": 0.15,
+    "outputPrice": 0.47,
+    "contextWindow": 1000000,
+    "catalogDate": "2026-10-19"
+  },
+  {
+    "id": "google/gemini-3.5-flash-lite",
+    "name": "Gemini 3.5 Flash-Lite",
+    "mark": "gemini",
+    "inputPrice": 0.3,
+    "outputPrice": 2.5,
+    "contextWindow": 1048576,
+    "catalogDate": "2026-10-19"
+  },
+  {
+    "id": "amazon/nova-2-lite-v1",
+    "name": "Amazon Nova 2 Lite",
+    "mark": "nova",
+    "inputPrice": 0.3,
+    "outputPrice": 2.5,
+    "contextWindow": 1000000,
+    "catalogDate": "2026-10-19"
+  },
+  {
+    "id": "minimax/minimax-m3",
+    "name": "MiniMax M3",
+    "mark": "minimax",
+    "inputPrice": 0.3,
+    "outputPrice": 1.2,
+    "contextWindow": 1048576,
+    "catalogDate": "2026-10-19"
+  },
+  {
+    "id": "zai/glm-5.3-flash",
+    "name": "GLM 5.3 Flash",
+    "mark": "zai",
+    "inputPrice": 0.15,
+    "outputPrice": 0.5,
+    "contextWindow": 1000000,
+    "catalogDate": "2026-10-19"
+  }
+]

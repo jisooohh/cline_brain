@@ -1,0 +1,60 @@
+{
+  "name": "clinebrain",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build && npm run build:worker",
+    "build:worker": "node scripts/build-worker.mjs",
+    "tauri": "tauri",
+    "desktop": "tauri dev",
+    "bundle": "tauri build --bundles app",
+    "test": "node --test worker/*.test.mjs tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@cline/agents": "^0.0.95",
+    "@cline/shared": "^0.0.95",
+    "@codemirror/commands": "^6.11.1",
+    "@codemirror/state": "^6.7.6",
+    "@codemirror/view": "^6.43.15",
+    "@composio/core": "0.25.0",
+    "@react-three/fiber": "^9.8.2",
+    "@tauri-apps/api": "^2.8.0",
+    "@tauri-apps/plugin-dialog": "^2.4.0",
+    "@tauri-apps/plugin-opener": "^2.5.0",
+    "@xterm/addon-fit": "^0.11.0",
+    "@xterm/xterm": "^6.0.0",
+    "highlight.js": "^11.12.0",
+    "lucide-react": "^0.468.0",
+    "prosekit": "^0.19.0",
+    "prosemirror-flat-list": "^0.5.8",
+    "prosemirror-tables": "^1.8.5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-markdown": "^10.1.0",
+    "remark": "^15.0.1",
+    "remark-directive": "^4.0.0",
+    "remark-frontmatter": "^5.0.0",
+    "remark-gfm": "^4.0.1",
+    "three": "^0.186.1",
+    "yaml": "^2.9.1",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.8.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@types/three": "^0.186.0",
+    "@vitejs/plugin-react": "^4.4.0",
+    "esbuild": "^0.25.0",
+    "prettier": "^3.9.10",
+    "typescript": "^5.8.0",
+    "vite": "^6.3.0"
+  },
+  "license": "AGPL-3.0-or-later",
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}
